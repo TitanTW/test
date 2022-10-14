@@ -1,8 +1,8 @@
 import random
 
-location = ["skeletonHideout", "vampireCastle", "dragonDen" , "fairyHouse", "monsterJungle", "hell", "witchPlace", "weaponStorage"]
+location = ["skeletonHideout", "vampireCastle", "dragonDen" , "fairyHouse", "monsterJungle", "hell", "witchPlace", "chest1","chest2","chest3"]
 
-weaponList = ["sword", "rifle"]
+weaponList = ["sword", "bow"]
 weaponDamage = [300, 500]
 myhealth = 3500
 
@@ -41,7 +41,7 @@ def callWeapon():
     if selectWeapon == "1":
         selectWeapon += weaponList[0]
         selectWeapon += weaponDamage[0]
-    if selectWeapon == "rifle":
+    if selectWeapon == "bow":
         selectWeapon += weaponList[1]
         selectWeapon += weaponDamage[1]
     
