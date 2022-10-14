@@ -77,7 +77,7 @@ def fairyHouse():
         witchPlace()
     elif selected == directions[2]: 
         skeletonHideout()
-def monsterJungle():
+def vampireCastle():
     print("Watch out the Monster Jungle!")
     choice = ""
     for i in directions:

@@ -1,6 +1,6 @@
 import random
 
-location = ["witchPlace", "vampireCastle", "weaponStorage"]
+location = ["skeletonHideout", "vampireCastle", "dragonDen" , "fairyHouse", "monsterJungle", "hell", "witchPlace", "weaponStorage"]
 
 weaponList = ["sword", "rifle"]
 weaponDamage = [300, 500]
