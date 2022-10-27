@@ -2,21 +2,23 @@
 import test2
 
 previous_location = ""
-
+holding_weapon = ""
 def startPoint():
     print("The game has started, please grab a weapon...")
+    print("-----------------------------------------------")
     global first_weapon_choices
-    first_weapon_choices = ["sword", "bow"]
+    global holding_weapon
+
+    first_weapon_choices = test2.weaponList #weapon list
     choice = ""
-    for i in first_weapon_choices:
-         choice += i + " "
-    selected = input("Choose the weapon: " + choice + " - ")
-    if selected == first_weapon_choices[0]:
-        skeletonHideout()
-    elif selected == first_weapon_choices[1]:
-        vampireCastle()
+    for i in first_weapon_choices: 
+         choice += str(first_weapon_choices.index(i)) + "." + i + " " #weapon choices
+    selected = int(input("Choose the weapon (pick a number): " + choice + " - ")) # input number
+    holding_weapon += first_weapon_choices[selected]
+    print("you are holding a "+ holding_weapon) 
    
-    direction_choices = ["left","right","front"]
+ 
+    direction_choices = ["left","right","forward"]
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -31,8 +33,12 @@ def startPoint():
 
 
 def skeletonHideout():
+    test2.callMonster(skeletonHideout)
     print("You are in the skeleton hideout")
-    direction_choices = ["left","right","front"]
+    print("-----------------------------------------------")
+    print("-----------------------------------------------")
+    direction_choices = ["left","right","forward"]
+   
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -47,8 +53,12 @@ def skeletonHideout():
 
 
 def vampireCastle():
+    test2.callMonster(vampireCastle)
+    test2.fightScene()
     print("You are in the vampire castle")
-    direction_choices = ["left","right","front"]
+    print("-----------------------------------------------")
+    direction_choices = ["left","right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     direction_choices.append("backward")
     for i in direction_choices:
@@ -66,7 +76,9 @@ def vampireCastle():
 
 def walkway():
     print("Keep walking")
-    direction_choices = ["left","right","front"]
+    print("-----------------------------------------------")
+    direction_choices = ["left","right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -85,7 +97,9 @@ def walkway():
 
 def dragonDen():
     print("Welcome to the Dragon's Den...")
-    direction_choices = ["left","right","front"]
+    print("-----------------------------------------------")
+    direction_choices = ["left","right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -103,7 +117,9 @@ def dragonDen():
 
 def fairyHouse():
     print("You are in the Fairy House...")
+    print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -119,7 +135,9 @@ def fairyHouse():
 
 def monsterJungle():
     print("Watch out the Monster Jungle!")
+    print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -139,7 +157,9 @@ def monsterJungle():
 
 def witchPlace():
     direction_choices = ["left", "right","forward"]
+    print("-----------------------------------------------")
     print("Welcome to the Witches' Place")
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
          choice += i + " "
@@ -155,7 +175,9 @@ def witchPlace():
 
 def chest2():
     print("You found chest(2)")
+    print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
         choice += i + " "
@@ -172,7 +194,9 @@ def chest2():
 
 def chest3():
     print("You found chest(3)")
+    print("-----------------------------------------------")
     direction_choices = ["left"]
+    print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
         choice += i + " "
@@ -183,17 +207,21 @@ def chest3():
 
 def final():
     print("You are about to enter the final zone")
+    print("-----------------------------------------------")
     ready = input("Are you sure to continue,  yes/no: " )
+    print("-----------------------------------------------")
     if ready == yes:
         hell()
     elif ready == no:
         previous_location
+    print("-----------------------------------------------")
 
         
 
 def hell():
     print("Welcome to the underworld...")
     print("This is the final boss")
+    print("-----------------------------------------------")
 
 startPoint()
 

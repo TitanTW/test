@@ -1,46 +1,47 @@
 import random
 
-location = ["witchPlace", "vampireCastle", "weaponStorage","dragonDen","fairyHouse","monsterJungle","hell","skeletonHideout","walkway"]
+location = ["witchPlace", "vampireCastle","dragonDen","fairyHouse","monsterJungle","hell","skeletonHideout","walkway","weaponStorage"]
 
 weaponList = ["sword", "bow"]
 weaponDamage = [300, 500]
 myhealth = 3500
-global monsterInPlace_name
-global monsterInPlace_health
-global monsterInPlace_attack
-monsterList = ["vampire", "witch","dragonDen","fairyHouse","monsterJungle","hell","skeletonHideout"]
+
+monsterList = ["vampire", "witch","Dragon's Den","Fairy's house","Monster's Jungle","Hell","Skeletons' Hideout"]
 monsterHealth = [1500,2500, 2000,3000,2700,10000,1800]
 monsterAttack = [500,700,800,400,1000,600,200]
 
 def callMonster(in_location):
+    global monsterInPlace_name
+    global monsterInPlace_health
+    global monsterInPlace_attack
     monsterInPlace_name = ""
     monsterInPlace_health = 0
     monsterInPlace_attack= 0
-    if in_location == "witchPlace":
-        monsterInPlace_name += monsterList[2]
-        monsterInPlace_health += monsterHealth[2]
-        monsterInPlace_attack += monsterAttack[2]
-    elif in_location == "vampireCastle":
+    if in_location == "vampireCastle":
+        monsterInPlace_name += monsterList[0]
+        monsterInPlace_health += monsterHealth[0]
+        monsterInPlace_attack += monsterAttack[0]
+    elif in_location == "witchPlace":
         monsterInPlace_name += monsterList[1]
         monsterInPlace_health += monsterHealth[1]
         monsterInPlace_attack += monsterAttack[1]
     elif in_location == "dragonDen":
+        monsterInPlace_name += monsterList[2]
+        monsterInPlace_health += monsterHealth[2]
+        monsterInPlace_attack += monsterAttack[2]
+    elif in_location == "fairyHouse":
         monsterInPlace_name += monsterList[3]
         monsterInPlace_health += monsterHealth[3]
         monsterInPlace_attack += monsterAttack[3]
-    elif in_location == "fairyHouse":
+    elif in_location == "monsterJungle":
         monsterInPlace_name += monsterList[4]
         monsterInPlace_health += monsterHealth[4]
         monsterInPlace_attack += monsterAttack[4]
-    elif in_location == "skeletonHideout":
-        monsterInPlace_name += monsterList[7]
-        monsterInPlace_health += monsterHealth[7]
-        monsterInPlace_attack += monsterAttack[7]
-    elif in_location == "monsterJungle":
+    elif in_location == "hell":
         monsterInPlace_name += monsterList[5]
         monsterInPlace_health += monsterHealth[5]
         monsterInPlace_attack += monsterAttack[5]
-    elif in_location == "hell":
+    elif in_location == "skeletonHideout":
         monsterInPlace_name += monsterList[6]
         monsterInPlace_health += monsterHealth[6]
         monsterInPlace_attack += monsterAttack[6]
