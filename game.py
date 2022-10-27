@@ -15,10 +15,10 @@ def startPoint():
     for i in first_weapon: 
          choice += str(first_weapon.index(i)) + "." + i + " " #weapon choices
     selected = int(input("Choose the weapon (pick a number): " + choice + " - ")) # input number
-    """   holding_weapon.append[test2.weaponList[selected]]
-     holding_weapon_damage.append[test2.weaponDamage[selected]]
-     print("you are holding a "+ holding_weapon) """
-    print(test2.weaponList[selected])
+    holding_weapon.append(test2.weaponList[selected])
+    holding_weapon_damage.append(test2.weaponDamage[selected])
+    print("you are holding a "+ holding_weapon[0]) 
+    
  
     direction_choices = ["left","right","forward"]
     choice = ""
@@ -98,6 +98,7 @@ def walkway():
 
 
 def dragonDen():
+    test2.callMonster(vampireCastle)
     print("Welcome to the Dragon's Den...")
     print("-----------------------------------------------")
     direction_choices = ["left","right","forward"]
@@ -118,6 +119,7 @@ def dragonDen():
 
 
 def fairyHouse():
+    test2.callMonster(vampireCastle)
     print("You are in the Fairy House...")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
@@ -136,6 +138,7 @@ def fairyHouse():
 
 
 def monsterJungle():
+    test2.callMonster(vampireCastle)
     print("Watch out the Monster Jungle!")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]

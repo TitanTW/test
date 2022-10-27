@@ -61,14 +61,20 @@ def callWeapon():
     return(selectWeapon)
 
 def fightScene():
-    while monsterHealth > 0:
+    while monsterInPlace_health > 0:
 
         temp = random.randint(1,2)
         if temp == 1:
-            monsterHealth -= weaponDamage #monster's health subtracted by weapon damage
+            monsterInPlace_health -= game #monster's health subtracted by weapon damage
+            print("You attacked the monster!")
             
         elif temp == 2:
-            myhealth -= monsterAttack #health decreasing from monster attack
+            myhealth -= monsterInPlace_attack #health decreasing from monster attack
+            print("The monster hit you!")
+    if myhealth <= 0:
+        print("you lost")
+    else:
+        print("you won")
     
 
 callMonster(location[0])
