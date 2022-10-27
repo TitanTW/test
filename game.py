@@ -2,21 +2,23 @@
 import test2
 
 previous_location = ""
-holding_weapon = ""
+holding_weapon = []
+holding_weapon_damage = []
 def startPoint():
     print("The game has started, please grab a weapon...")
     print("-----------------------------------------------")
-    global first_weapon_choices
+    global first_weapon
     global holding_weapon
-
-    first_weapon_choices = test2.weaponList #weapon list
+    global holding_weapon_damage   
+    first_weapon = test2.weaponList #weapon list
     choice = ""
-    for i in first_weapon_choices: 
-         choice += str(first_weapon_choices.index(i)) + "." + i + " " #weapon choices
+    for i in first_weapon: 
+         choice += str(first_weapon.index(i)) + "." + i + " " #weapon choices
     selected = int(input("Choose the weapon (pick a number): " + choice + " - ")) # input number
-    holding_weapon += first_weapon_choices[selected]
-    print("you are holding a "+ holding_weapon) 
-   
+    """   holding_weapon.append[test2.weaponList[selected]]
+     holding_weapon_damage.append[test2.weaponDamage[selected]]
+     print("you are holding a "+ holding_weapon) """
+    print(test2.weaponList[selected])
  
     direction_choices = ["left","right","forward"]
     choice = ""
