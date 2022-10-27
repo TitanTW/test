@@ -158,7 +158,7 @@ def chest2():
     direction_choices = ["left", "right","forward"]
     choice = ""
     for i in direction_choices:
-        choice += i + ""
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         vampireCastle()
@@ -175,7 +175,7 @@ def chest3():
     direction_choices = ["left"]
     choice = ""
     for i in direction_choices:
-        choice += i + ""
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         hell()
