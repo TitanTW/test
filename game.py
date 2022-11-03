@@ -1,7 +1,7 @@
 
 import test2
-
-ious_location = ""
+import sys
+previous_location = ""
 holding_weapon = []
 holding_weapon_damage = []
 def startPoint():
@@ -34,6 +34,14 @@ def startPoint():
 def skeletonHideout():
     test2.callMonster("skeletonHideout")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("You are in the skeleton hideout")
     print("-----------------------------------------------")
     print("-----------------------------------------------")
@@ -53,6 +61,14 @@ def skeletonHideout():
 def vampireCastle():
     test2.callMonster("vampireCastle")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("You are in the vampire castle")
     print("-----------------------------------------------")
     direction_choices = ["left","right","forward"]
@@ -88,6 +104,14 @@ def walkway():
 def dragonDen():
     test2.callMonster("dragonDen")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("Welcome to the Dragon's Den...")
     print("-----------------------------------------------")
     direction_choices = ["left","right","forward"]
@@ -106,6 +130,14 @@ def dragonDen():
 def fairyHouse():
     test2.callMonster("fairyHouse")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("You are in the Fairy House...")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
@@ -124,6 +156,14 @@ def fairyHouse():
 def monsterJungle():
     test2.callMonster("monsterJungle")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("Watch out the Monster Jungle!")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
@@ -142,6 +182,14 @@ def monsterJungle():
 def witchPlace():
     test2.callMonster("witchPlace")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     direction_choices = ["left", "right","forward"]
     print("-----------------------------------------------")
     print("Welcome to the Witches' Place")
@@ -198,6 +246,14 @@ def final():
 def hell():
     test2.callMonster("hell")
     test2.fightScene()
+    if  test2.myhealth <= 0:
+
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            startPoint()
+        elif restart == "2":
+            sys.exit()
     print("Welcome to the underworld...")
     print("This is the final boss")
     print("-----------------------------------------------")
