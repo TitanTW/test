@@ -207,6 +207,11 @@ def witchPlace():
 def chest2():
     print("You found chest(2)")
     print("-----------------------------------------------")
+    confirmPotion = input("Do you want to use a health potion- 1.Yes 2.No :")
+    if confirmPotion == "1":
+        test2.myhealth += 3000
+    elif confirmPotion =="2":
+        None
     direction_choices = ["left", "right","forward"]
     print("-----------------------------------------------")
     choice = ""
@@ -220,9 +225,15 @@ def chest2():
     elif selected == direction_choices[2]: 
         monsterJungle()
     previous_location = chest2()
+
 def chest3():
     print("You found chest(3)")
     print("-----------------------------------------------")
+    confirmPotion = input("Do you want to use a health potion- 1.Yes 2.No :")
+    if confirmPotion == "1":
+        test2.myhealth += 5000
+    elif confirmPotion =="2":
+        None
     direction_choices = ["left"]
     print("-----------------------------------------------")
     choice = ""
@@ -247,7 +258,7 @@ def hell():
     test2.callMonster("hell")
     test2.fightScene()
     if  test2.myhealth <= 0:
-
+    
         print("GAME OVER...")
         restart = input("hit 1 to Restart/hit 2 to End: ")
         if restart == "1":

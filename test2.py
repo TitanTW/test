@@ -4,11 +4,11 @@ location = ["witchPlace", "vampireCastle","dragonDen","fairyHouse","monsterJungl
 
 weaponList = ["sword", "bow"]
 weaponDamage = [300, 500]
-myhealth = 3500
+myhealth = 12000
 
 monsterList = ["vampire", "witch","Dragon's Den","Fairy's house","Monster's Jungle","Hell","Skeletons' Hideout"]
 monsterHealth = [1500,2500, 2000,3000,2700,10000,1800]
-monsterAttack = [500,700,800,400,1000,600,200]
+monsterAttack = [500,700,800,400,600,1000,200]
 
 def callMonster(in_location):
     
