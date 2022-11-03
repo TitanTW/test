@@ -35,7 +35,8 @@ def startPoint():
 
 
 def skeletonHideout():
-    test2.callMonster(skeletonHideout)
+    test2.callMonster("skeletonHideout")
+    test2.fightScene()
     print("You are in the skeleton hideout")
     print("-----------------------------------------------")
     print("-----------------------------------------------")
@@ -55,7 +56,7 @@ def skeletonHideout():
 
 
 def vampireCastle():
-    test2.callMonster(vampireCastle)
+    test2.callMonster("vampireCastle")
     test2.fightScene()
     print("You are in the vampire castle")
     print("-----------------------------------------------")
@@ -98,7 +99,8 @@ def walkway():
 
 
 def dragonDen():
-    test2.callMonster(vampireCastle)
+    test2.callMonster("dragonDen")
+    test2.fightScene()
     print("Welcome to the Dragon's Den...")
     print("-----------------------------------------------")
     direction_choices = ["left","right","forward"]
@@ -119,7 +121,8 @@ def dragonDen():
 
 
 def fairyHouse():
-    test2.callMonster(vampireCastle)
+    test2.callMonster("fairyHouse")
+    test2.fightScene()
     print("You are in the Fairy House...")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
@@ -138,7 +141,8 @@ def fairyHouse():
 
 
 def monsterJungle():
-    test2.callMonster(vampireCastle)
+    test2.callMonster("monsterJungle")
+    test2.fightScene()
     print("Watch out the Monster Jungle!")
     print("-----------------------------------------------")
     direction_choices = ["left", "right","forward"]
@@ -161,6 +165,8 @@ def monsterJungle():
 
 
 def witchPlace():
+    test2.callMonster("witchPlace")
+    test2.fightScene()
     direction_choices = ["left", "right","forward"]
     print("-----------------------------------------------")
     print("Welcome to the Witches' Place")
@@ -207,7 +213,7 @@ def chest3():
         choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
-        hell()
+        final()
     previous_location = chest3()
 
 def final():
@@ -215,15 +221,17 @@ def final():
     print("-----------------------------------------------")
     ready = input("Are you sure to continue,  yes/no: " )
     print("-----------------------------------------------")
-    if ready == yes:
+    if ready == "yes":
         hell()
-    elif ready == no:
+    elif ready == "no":
         previous_location
     print("-----------------------------------------------")
 
         
 
 def hell():
+    test2.callMonster("hell")
+    test2.fightScene()
     print("Welcome to the underworld...")
     print("This is the final boss")
     print("-----------------------------------------------")

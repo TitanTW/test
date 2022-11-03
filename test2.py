@@ -11,12 +11,14 @@ monsterHealth = [1500,2500, 2000,3000,2700,10000,1800]
 monsterAttack = [500,700,800,400,1000,600,200]
 
 def callMonster(in_location):
+    
     global monsterInPlace_name
     global monsterInPlace_health
     global monsterInPlace_attack
     monsterInPlace_name = ""
     monsterInPlace_health = 0
     monsterInPlace_attack= 0
+    print(in_location)
     if in_location == "vampireCastle":
         monsterInPlace_name += monsterList[0]
         monsterInPlace_health += monsterHealth[0]
@@ -61,19 +63,28 @@ def callWeapon():
     return(selectWeapon)
 
 def fightScene():
-    while monsterInPlace_health > 0:
+
+    global monsterInPlace_health
+    global myhealth
+    print(myhealth)
+    print(monsterInPlace_health)
+    print(monsterInPlace_attack)
+    while monsterInPlace_health or myhealth > 0:
 
         temp = random.randint(1,2)
         if temp == 1:
-            monsterInPlace_health -= game #monster's health subtracted by weapon damage
-            print("You attacked the monster!")
+            monsterInPlace_health -= 300 #monster's health subtracted by weapon damage
+            print("\nYou attacked the monster!")
             
         elif temp == 2:
             myhealth -= monsterInPlace_attack #health decreasing from monster attack
-            print("The monster hit you!")
+            print("\nThe monster hit you!")
+        input("\nENTER ")
+        print("\nMy health:" + str(myhealth))
+        print("Monster's health: " + str(monsterInPlace_health))
     if myhealth <= 0:
         print("you lost")
-    else:
+    elif monsterInPlace_health <= 0:
         print("you won")
     
 
