@@ -1,5 +1,6 @@
 import random
-
+import game
+import sys
 location = ["witchPlace", "vampireCastle","dragonDen","fairyHouse","monsterJungle","hell","skeletonHideout","walkway","weaponStorage"]
 
 weaponList = ["sword", "bow"]
@@ -69,7 +70,7 @@ def fightScene():
     print(myhealth)
     print(monsterInPlace_health)
     print(monsterInPlace_attack)
-    while monsterInPlace_health or myhealth > 0:
+    while monsterInPlace_health > 0 or myhealth > 0:
 
         temp = random.randint(1,2)
         if temp == 1:
@@ -84,6 +85,13 @@ def fightScene():
         print("Monster's health: " + str(monsterInPlace_health))
     if myhealth <= 0:
         print("you lost")
+        print("GAME OVER...")
+        restart = input("hit 1 to Restart/hit 2 to End: ")
+        if restart == "1":
+            game.startpoint()
+        elif restart == "2":
+            sys.exit()
+        
     elif monsterInPlace_health <= 0:
         print("you won")
     

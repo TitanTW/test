@@ -1,7 +1,7 @@
 
 import test2
 
-previous_location = ""
+ious_location = ""
 holding_weapon = []
 holding_weapon_damage = []
 def startPoint():
@@ -13,17 +13,17 @@ def startPoint():
     first_weapon = test2.weaponList #weapon list
     choice = ""
     for i in first_weapon: 
-         choice += str(first_weapon.index(i)) + "." + i + " " #weapon choices
+        choice += str(first_weapon.index(i)) + "." + i + " " #weapon choices
     selected = int(input("Choose the weapon (pick a number): " + choice + " - ")) # input number
     holding_weapon.append(test2.weaponList[selected])
     holding_weapon_damage.append(test2.weaponDamage[selected])
     print("you are holding a "+ holding_weapon[0]) 
     
- 
+
     direction_choices = ["left","right","forward"]
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         skeletonHideout()
@@ -31,9 +31,6 @@ def startPoint():
         vampireCastle()
     elif selected == direction_choices[2]: 
         walkway()
-
-
-
 def skeletonHideout():
     test2.callMonster("skeletonHideout")
     test2.fightScene()
@@ -41,10 +38,10 @@ def skeletonHideout():
     print("-----------------------------------------------")
     print("-----------------------------------------------")
     direction_choices = ["left","right","forward"]
-   
+
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         chest2()
@@ -53,8 +50,6 @@ def skeletonHideout():
     elif selected == direction_choices[2]: 
         monsterJungle()
     previous_location = skeletonHideout()
-
-
 def vampireCastle():
     test2.callMonster("vampireCastle")
     test2.fightScene()
@@ -65,7 +60,7 @@ def vampireCastle():
     choice = ""
     direction_choices.append("backward")
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         walkway()
@@ -74,9 +69,6 @@ def vampireCastle():
     elif selected == direction_choices[2]: 
         dragonDen()
     previous_location = vampireCastle()
-
-
-
 def walkway():
     print("Keep walking")
     print("-----------------------------------------------")
@@ -84,7 +76,7 @@ def walkway():
     print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         monsterJungle()
@@ -93,11 +85,6 @@ def walkway():
     elif selected == direction_choices[2]: 
         witchPlace()
     previous_location = walkway()
-
-
-
-
-
 def dragonDen():
     test2.callMonster("dragonDen")
     test2.fightScene()
@@ -107,7 +94,7 @@ def dragonDen():
     print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         walkway()
@@ -116,10 +103,6 @@ def dragonDen():
     elif selected == direction_choices[2]: 
         chest3()
     previous_location = dragonDen()
-
-
-
-
 def fairyHouse():
     test2.callMonster("fairyHouse")
     test2.fightScene()
@@ -129,7 +112,7 @@ def fairyHouse():
     print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         monsterJungle()
@@ -138,8 +121,6 @@ def fairyHouse():
     elif selected == direction_choices[2]:
         dragonDen()
     previous_location = fairyHouse()
-
-
 def monsterJungle():
     test2.callMonster("monsterJungle")
     test2.fightScene()
@@ -149,7 +130,7 @@ def monsterJungle():
     print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         fairyHouse()
@@ -158,12 +139,6 @@ def monsterJungle():
     elif selected == direction_choices[2]: 
         hell()
     previous_location = monsterJungle()
-
-
-
-
-
-
 def witchPlace():
     test2.callMonster("witchPlace")
     test2.fightScene()
@@ -173,16 +148,13 @@ def witchPlace():
     print("-----------------------------------------------")
     choice = ""
     for i in direction_choices:
-         choice += i + " "
+        choice += i + " "
     selected = input("Choose the direction: " + choice + " - ")
     if selected == direction_choices[0]:
         hell()
     elif selected == direction_choices[1]:
         chest3()
     previous_location = witchPlace()
-  
-
-
 
 def chest2():
     print("You found chest(2)")
@@ -200,9 +172,6 @@ def chest2():
     elif selected == direction_choices[2]: 
         monsterJungle()
     previous_location = chest2()
-
-
-
 def chest3():
     print("You found chest(3)")
     print("-----------------------------------------------")
@@ -215,7 +184,6 @@ def chest3():
     if selected == direction_choices[0]:
         final()
     previous_location = chest3()
-
 def final():
     print("You are about to enter the final zone")
     print("-----------------------------------------------")
@@ -226,18 +194,11 @@ def final():
     elif ready == "no":
         previous_location
     print("-----------------------------------------------")
-
         
-
 def hell():
     test2.callMonster("hell")
     test2.fightScene()
     print("Welcome to the underworld...")
     print("This is the final boss")
     print("-----------------------------------------------")
-
 startPoint()
-
-
-
-
