@@ -5,11 +5,13 @@ location = ["witchPlace", "vampireCastle","dragonDen","fairyHouse","monsterJungl
 weaponList = ["sword", "bow"]
 weaponDamage = [300, 500]
 myhealth = 12000
-
+maxhealth = 12000
 monsterList = ["vampire", "witch","Dragon's Den","Fairy's house","Monster's Jungle","Hell","Skeletons' Hideout"]
 monsterHealth = [1500,2500, 2000,3000,2700,10000,1800]
 monsterAttack = [500,700,800,400,600,1000,200]
-
+def foundPotion():
+    potionList = [0.1,0.2,0.3,0.5,0.7]
+    myhealth += maxhealth * potionList[random.randint(0,4)]
 def callMonster(in_location):
     
     global monsterInPlace_name

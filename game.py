@@ -1,6 +1,8 @@
 
 import test2
 import sys
+import random
+
 previous_location = ""
 holding_weapon = []
 holding_weapon_damage = []
@@ -207,11 +209,8 @@ def witchPlace():
 def chest2():
     print("You found chest(2)")
     print("-----------------------------------------------")
-    confirmPotion = input("Do you want to use a health potion- 1.Yes 2.No :")
-    if confirmPotion == "1":
-        test2.myhealth += 3000
-    elif confirmPotion =="2":
-        None
+    print("You collected a potion")
+    test2.foundPotion()
     direction_choices = ["left", "right","forward"]
     print("-----------------------------------------------")
     choice = ""
@@ -229,11 +228,7 @@ def chest2():
 def chest3():
     print("You found chest(3)")
     print("-----------------------------------------------")
-    confirmPotion = input("Do you want to use a health potion- 1.Yes 2.No :")
-    if confirmPotion == "1":
-        test2.myhealth += 5000
-    elif confirmPotion =="2":
-        None
+    test2.foundPotion()
     direction_choices = ["left"]
     print("-----------------------------------------------")
     choice = ""
