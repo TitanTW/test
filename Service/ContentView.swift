@@ -44,7 +44,8 @@ class AppViewModel: ObservableObject {
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
-    @StateObject private var viewModel = ServiceViewModel()
+    //@StateObject private var viewModel = ServiceViewModel()
+    
     var body: some View {
         NavigationView {
             if viewModel.signedIn {
@@ -169,7 +170,7 @@ struct SignUpView: View {
         .padding()
         
         Spacer()
-        // Test test test
+        
         .navigationTitle("Create Account")
     }
         
